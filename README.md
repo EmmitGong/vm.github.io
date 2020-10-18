@@ -1,3 +1,3 @@
-# vmware.github.io
+# vm.github.io
 Intranet environment navigation website
-vmware.github.io
+vm.github.io
