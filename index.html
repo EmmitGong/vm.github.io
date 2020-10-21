@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <!-- Begin SEO tag -->
+  <title>vSphere site</title>
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="vSphere Site">
+  <meta property="og:title" content="vSphere Site">
+  <!-- End SEO tag -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="keywords" content="emmitgong,ops,sre,linux,devops,python,django,nginx" />
+  <meta name="description" content="追求技术的道路上，我从不曾停下脚步" />
+  <link rel="stylesheet" href="css/vmware-css.min.css" type="text/css" />
+  <link rel="shortcut icon" href="images/vm.png" />
+
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158772988-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-158772988-1');
+  </script>
+</head>
+
+<body data-rsssl=1>
+  <div class="header">
+    <div class="container">
+      <a class="site" href="/">vSphere Site</a>
+      <nav class="header-menu">
+        <ul>
+          <li class="current-menu-item"><a href="./index.html">Home</a></li>
+          <li class=""><a href="esxi.html">ESXi</a></li>
+          <li class=""><a href="network.html">Network</a></li>
+          <!-- <li class=""><a href="new.html">后期扩容</a></li> -->
+          <li class=""><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- header -->
+
+  <div id="content-wrapper">
+    <div class="container">
+
+      <section class="sousuo">
+        <div class="search">
+          <div class="search-box">
+            <img class="search-icon" src="">
+            <input type="text" id="txt" class="search-input" placeholder="点击左侧图标可选择搜索引擎；按回车搜索">
+            <button class="search-btn" id="search-btn"><img
+                src="./images/sou0.png"></button>
+          </div>
+          <!-- 搜索引擎 -->
+          <div class="search-engine" style="display: none;">
+            <ul class="search-engine-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="nav-cell clearfix">
+        <ul class="nav-list">
+          <li>
+            <a class="nav-item clearfix" href="https://admin:VMware1!@10.1.182.14/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/nsx-v.png);">
+              </div>
+              <div class="nav-name">NSX-V Manager</div>
+              <p>admin</p>
+			  <p>VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://admin:VMware1!VMware1!@10.1.182.15/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/nsx-t.png);">
+              </div>
+              <div class="nav-name">NSX-T</div>
+              <p>admin</p>
+			  <p>VMware1!VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://10.1.182.5/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/vcenter.png);">
+              </div>
+              <div class="nav-name">vCenter</div>
+              <p>administrator@vsphere.local</p>
+			  <p>VMware1!VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://10.1.182.51/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/view.png);">
+              </div>
+              <div class="nav-name">Horizon View</div>
+              <p>viewadmin</p>
+			  <p>VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://192.168.125.8/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/vrni.png);">
+              </div>
+              <div class="nav-name">vRealize Network Insight</div>
+              <p>adim@local</p>
+			  <p>VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://admin:VMware1!VMware1!@10.1.182.15/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/vro.png);">
+              </div>
+              <div class="nav-name">vRealize Orchestrator</div>
+              <p>admin</p>
+			  <p>VMware1!VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://10.1.182.60/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/vra.png);">
+              </div>
+              <div class="nav-name">vRealize Automation</div>
+              <p>iaasadmin</p>
+			  <p>VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://192.168.125.16/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/vrops.png);">
+              </div>
+              <div class="nav-name">vRealize Operations Manager</div>
+              <p>admin</p>
+			  <p>VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://admin:VMware1!VMware1!@10.1.182.15/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/nsx-t.png);">
+              </div>
+              <div class="nav-name">NSX-T</div>
+              <p>admin</p>
+			  <p>VMware1!VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://admin:VMware1!VMware1!@10.1.182.15/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/nsx-t.png);">
+              </div>
+              <div class="nav-name">NSX-T</div>
+              <p>admin</p>
+			  <p>VMware1!VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://admin:VMware1!VMware1!@10.1.182.15/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/nsx-t.png);">
+              </div>
+              <div class="nav-name">NSX-T</div>
+              <p>admin</p>
+			  <p>VMware1!VMware1!</p>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item clearfix" href="https://admin:VMware1!VMware1!@10.1.182.15/" target="_blank">
+              <div class="nav-img"
+                style="margin-bottom:40px;background-image: url(./images/nsx-t.png);">
+              </div>
+              <div class="nav-name">NSX-T</div>
+              <p>admin</p>
+			  <p>VMware1!VMware1!</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container clearfix">
+      <div class="copy"> © 2020 <a href="https://emmitgong.cn" target="_blank">Emmit Gong</a></div>
+
+      <div class="link">
+        <a href="/" target="_blank">关于本站</a>
+        <a href="/" target="_blank">回到首页</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/vmware-js.min.js"></script>
+</body>
+
+</html>

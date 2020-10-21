@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- 常见问题 -->
+<html lang="zh-CN">
+
+  <!-- Begin SEO tag -->
+  <title>FAQ - vSphere site</title>
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="FAQ - vSphere site">
+  <meta property="og:title" content="vSphere site">
+  <!-- End SEO tag -->
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="keywords" content="EmmitGong,ops,sre,linux,devops,python,django,nginx" />
+  <meta name="description" content="追求技术的道路上，我从不曾停下脚步" />
+  <link rel="stylesheet" href="css/vmware-css.min.css" type="text/css" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158772988-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-158772988-1');
+  </script>
+</head>	
+	
+<body data-rsssl=1>
+  <div class="header">
+    <div class="container">
+      <a class="site" href="/">vSphere Site</a>
+      <nav class="header-menu">
+        <ul>
+          <li class="current-menu-item"><a href="index.html">Home</a></li>
+          <li class=""><a href="esxi.html">ESXi</a></li>
+          <li class=""><a href="network.html">Network</a></li>
+          <!-- <li class=""><a href="new.html">后期扩容</a></li> -->
+          <li class=""><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- header -->
+</body>
+
+<div id="content-wrapper">
+  <div class="container">
+    <h1 id="art-title">常见问题</h1>
+	
+    <h2>打开网站时提示无法访问此网站</h2>
+
+    <p>代理设置问题，访问浏览器设置地址：<a href="chrome://settings/">chrome://settings/</a>，找到「系统」Chrome 使用的是由某款扩展程序指定的代理设置 </p>
+
+    <p>
+      打开<strong>Proxy SwitchyOmega</strong>，在不代理的地址列表中<strong>添加不经过代理连接地址</strong>，输入地址<code>10.1.0.0/16</code>，点击<strong>应用选项</strong>即可
+    </p>
+
+    <p>添加完成后再次打开网站正常</p>
+	
+    <h2>如何修改地址</h2>
+
+	<p>导航站采用纯静态构建，使用SSH连接<code>10.1.182.18</code>主机后只需要改/var/www/html/index.html文件中的<code>li</code>代码块即可，<code>li</code>代码块结构如下：</p>
+	<p><img alt="" src="./images/code.png"></p>
+	<p>仅需修改如下几个位置，分别对应了网站的几个关键信息：</p>
+	<p>修改<code>https://10.1.182.1</code>为对应网站的<strong>URL</strong>地址</p>
+	<p>修改<code>images/test.png</code>为对应网站的<strong>Logo</strong>地址（可以跳过）</p>
+	<p>修改<code>vCenter Server</code>为对应网站的<strong>名称</strong></p>
+	<p>修改<code>administrator@vsphere.local</code>为对应网站的<strong>登录用户</strong></p>
+	<p>修改<code>vmware!</code>为对应网站的<strong>登录密码</strong></p>
+
+
+
+    <h2>如何设置为浏览器主页</h2>
+
+	<p>打开Chrome浏览器，访问浏览器设置地址：<a href="chrome://settings/">chrome://settings/</a></p>
+
+    <p>找到<strong>启动时</strong>设置，选择<strong>选择特定网页或一组网页</strong>，点击<strong>添加新网页</strong>，填写网址<code>http://10.1.182.18/index.html</code>，点击<strong>添加</strong>即可
+
+   <h2>打开网站时提示无法访问此地址</h2>
+
+    <p>DNS解析问题，win+R 打开运行 输入ncpa.cpl命令打开网络连接页面，右键「以太网」「属性」双击「Internet协议版本4」，填写备用DNS服务器地址为：10.1.182.2</p>
+
+    <p>注意：设置DNS时需要<strong>管理员权限！</strong></p>
+
+    <p>如无法使用管理员权限进行设置DNS，可以采用手动编辑hosts文件的方法添加解析地址</p>
+
+<details>
+    <summary>添加如下hosts解析信息</summary>
+    <dl>
+        <dt>打开路径 C:\Windows\System32\drivers\etc 找到hosts文件</dt>
+        <dd>
+			<p>10.1.182.2 dc1.vm.com </p>
+			<p>10.1.182.3 dc2.vm.com </p>
+			<p>10.1.182.4 psc.vm.com </p>
+			<p>10.1.182.5 vc1.vm.com </p>
+			<p>10.1.182.6 vc2.vm.com </p>
+			<p>10.1.182.7 vc3.vm.com </p>
+
+			<p>10.1.182.32 lab1-esxi-02.vm.com   </p>
+			<p>10.1.182.33 lab1-esxi-03.vm.com   </p>
+			<p>10.1.182.34 lab1-esxi-04.vm.com   </p>
+			<p>10.1.182.35 lab1-esxi-05.vm.com   </p>
+			<p>10.1.182.36 lab1-esxi-06.vm.com   </p>
+			<p>10.1.182.37 lab1-esxi-07.vm.com   </p>
+			<p>10.1.182.38 lab1-esxi-08.vm.com   </p>
+
+			<p>10.1.182.50 vdi.vm.com </p>
+			<p>10.1.182.51 ConneSer-1.vm.com </p>
+			<p>10.1.182.52 ConneSer-2.vm.com </p>
+			<p>10.1.182.55 composerser.vm.com </p>
+
+			<p>10.1.182.60 vra.vm.com  </p>
+		
+		</dd>
+        
+    </dl>
+</details>
+
+    <p>大功告成，祝你使用愉快</p>	
+	
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container clearfix">
+    <div class="copy"> © 2020 <a href="https://emmitgong.cn/" target="_blank">Emmit Gong</a></div>
+
+    <div class="link">
+     <!-- <a href="https://nav.ops-coffee.cn/" target="_blank">关于本站</a> -->
+     <!-- <a href="https://nav.ops-coffee.cn/" target="_blank">回到首页</a> -->
+    </div>
+
+  </div>
+</footer>
+	
+
+</html>
