@@ -1,3 +1,3 @@
-# vm.github.io
+# vsphere
 Intranet environment navigation website
-vm.github.io
+vsphere
